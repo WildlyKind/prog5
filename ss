@@ -1,0 +1,33 @@
+[ {
+  "id" : 0,
+  "name" : "EL3",
+  "coordinates" : {
+    "x" : 1,
+    "y" : 1.0
+  },
+  "creationDate" : 1772359580642,
+  "health" : 1.0,
+  "height" : 1.0,
+  "category" : "HELIX",
+  "weaponType" : "BOLTGUN",
+  "chapter" : {
+    "name" : "NAMEMEME",
+    "parentLegion" : "PARLEG"
+  }
+}, {
+  "id" : 1,
+  "name" : "NAME2",
+  "coordinates" : {
+    "x" : 2,
+    "y" : 2.0
+  },
+  "creationDate" : 1772359638158,
+  "health" : 2.0,
+  "height" : 2.0,
+  "category" : "INCEPTOR",
+  "weaponType" : "COMBI_FLAMER",
+  "chapter" : {
+    "name" : "NAMEMEMEMEME",
+    "parentLegion" : "LOL"
+  }
+} ]
