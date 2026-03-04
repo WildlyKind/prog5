@@ -3,7 +3,7 @@ package commands;
 
 public class HelpCommand implements Command{
     @Override
-    public void execute() {
+    public void execute(String[] args) {
         for (String key: Invoker.commands.keySet()) {
             System.out.printf("%s - %s\n", key, Invoker.commands.get(key).desc());
         }

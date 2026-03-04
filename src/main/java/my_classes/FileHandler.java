@@ -13,6 +13,11 @@ import java.util.LinkedList;
 
 public class FileHandler {
     public static String file_name = "save";
+
+    /**
+     * Возвращает имя файла
+     * @param name имя файла
+     */
     public static void get_file_name(String name) {
         file_name = name;
     }
@@ -27,8 +32,8 @@ public class FileHandler {
             String json = mapper.writeValueAsString(CollectionHandler.spaceMarines);
 
             File f = new File(file_name);
-            if (f.exists()) { f.delete(); }
-            f.createNewFile();
+            if (f.exists()) { f.delete(); } //проверяется, существует ли уже такой файл
+            f.createNewFile(); //создается новый пустой файл
 
             PrintWriter pw = new PrintWriter(f);
             pw.print(json);
@@ -50,9 +55,10 @@ public class FileHandler {
         try {
             File file = new File(s);
             LinkedList<SpaceMarine> employeeList = objectMapper.readValue(file, new TypeReference<LinkedList<SpaceMarine>>() {});
+            //помогает сохранить информацию о дженериках, из-за стирания типов мы не можем просто написать LinkedList<SpaceMarine>.class
 
             CollectionHandler.spaceMarines = employeeList;
-
+            SpaceMarine.setId(CollectionHandler.max_id()+1);
         } catch (FileNotFoundException e) {
             System.out.println("Файл не найден");
         } catch (IOException e) {

@@ -9,7 +9,7 @@ public class InfoCommand implements Command{
     }
 
     @Override
-    public void execute() {
+    public void execute(String[] args) {
         CollectionHandler.info();
     }
 }

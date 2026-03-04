@@ -5,7 +5,15 @@ import my_classes.InputHandler;
 
 public class UpdateIdCommand implements Command{
     @Override
-    public void execute() { CollectionHandler.update_id(InputHandler.Id());
+    public void execute(String[] args) {
+        Long id;
+        try {
+            id = Long.parseLong(args[0]);
+            CollectionHandler.update_id(id);
+        } catch (Exception e) {
+            System.out.println("Вы ввели неправильный id");
+        }
+
     }
 
     @Override

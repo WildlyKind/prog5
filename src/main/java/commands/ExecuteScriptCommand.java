@@ -2,16 +2,16 @@ package commands;
 
 import my_classes.InputHandler;
 import java.io.BufferedReader;
-import java.nio.file.*;
 import java.io.*;
 import java.nio.charset.StandardCharsets;
+import java.util.Arrays;
 import java.util.Scanner;
 
 public class ExecuteScriptCommand implements Command{
     @Override
-    public void execute() {
+    public void execute(String[] args) {
         try {
-            String file_name = InputHandler.sc.next();
+            String file_name = args[0];
 
             BufferedReader reader = new BufferedReader(
                     new FileReader("src\\scripts\\" + file_name, StandardCharsets.UTF_8));
@@ -21,7 +21,7 @@ public class ExecuteScriptCommand implements Command{
                 String[] inp = sc.nextLine().strip().split(" ");
                 String commandName = inp[0];
                 try {
-                    Invoker.setCommand(commandName);
+                    Invoker.setCommand(commandName, Arrays.copyOfRange(inp, 1, inp.length));
                 } catch (NullPointerException e) {
                     System.out.println("Команда не найдена, введите help");
                 }

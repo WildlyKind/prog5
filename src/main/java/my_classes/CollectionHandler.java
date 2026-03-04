@@ -108,8 +108,7 @@ public class CollectionHandler {
     /**
      * Выводит элементы, значение поля name которых начинается с заданной подстроки
      */
-    public static void filter_starts_with_name() {
-        String inputName = InputHandler.sc.next();
+    public static void filter_starts_with_name(String inputName) {
         boolean flag = false;
         for (SpaceMarine s: spaceMarines) {
             if (s.getName().startsWith(inputName)) {

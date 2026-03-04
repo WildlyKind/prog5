@@ -5,7 +5,7 @@ import my_classes.SpaceMarine;
 
 public class RemoveLowerCommand implements Command{
     @Override
-    public void execute() {
+    public void execute(String[] args) {
         CollectionHandler.remove_lower(new SpaceMarine());
     }
 

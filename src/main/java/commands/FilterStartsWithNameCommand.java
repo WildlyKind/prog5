@@ -4,8 +4,14 @@ import my_classes.CollectionHandler;
 
 public class FilterStartsWithNameCommand implements Command{
     @Override
-    public void execute() {
-        CollectionHandler.filter_starts_with_name();
+    public void execute(String[] args) {
+        try {
+            //id = Long.parseLong(args[0]);
+            CollectionHandler.filter_starts_with_name(args[0]);
+        } catch (Exception e) {
+            System.out.println("Вы ввели неправильный name");
+        }
+
     }
 
     @Override

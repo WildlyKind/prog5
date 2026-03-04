@@ -89,7 +89,9 @@ public class SpaceMarine implements Comparable<SpaceMarine>{
      */
     public Chapter getChapter() { return this.chapter; }
 
-
+    public static void setId(Long c) {
+        count = c;
+    }
 
     @Override
     public String toString() {

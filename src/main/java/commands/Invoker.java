@@ -34,8 +34,8 @@ public class Invoker {
      * Выполняет указанную команду
      * @param name команды
      */
-    public static void setCommand(String name) {
-        commands.get(name).execute();
+    public static void setCommand(String name, String[] args) {
+        commands.get(name).execute(args);
         addToHistory(name);
     }
 

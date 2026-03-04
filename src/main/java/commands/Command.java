@@ -8,7 +8,7 @@ public interface Command {
      * Выполнение команды
      *
      */
-    public void execute();
+    public void execute(String[] args);
     //public default void execute(String... args) {};
 
     /**

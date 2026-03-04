@@ -7,7 +7,7 @@ public class HistoryCommand implements Command{
     }
 
     @Override
-    public void execute() {
+    public void execute(String[] args) {
         for (String s : Invoker.getHistory()) {
             System.out.println(s);
         }

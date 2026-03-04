@@ -16,7 +16,7 @@ public class InputHandler {
      */
     public static String stringInput(String name) {
         System.out.println("Введите " + name + ":");
-        return sc.next();
+        return sc.nextLine();
     }
 
     /**
@@ -24,7 +24,7 @@ public class InputHandler {
      * @return строка, введенная пользователем
      */
     public static String stringInput() {
-        return sc.next();
+        return sc.nextLine();
     }
 
     /**
@@ -37,9 +37,9 @@ public class InputHandler {
         while (true) {
             try {
                 System.out.println("Введите " + name + ":");
-                value = sc.nextDouble();
+                value = Double.parseDouble(sc.nextLine());
                 break;
-            } catch (InputMismatchException e) {
+            } catch (NumberFormatException e) {
                 System.out.println("Вы ввели не число");
             } catch (Exception e) {
                 System.out.println("Упс, ошибка :(");
@@ -57,7 +57,7 @@ public class InputHandler {
         AstartesCategory value = null;
         while (true) {
             try {
-                value = AstartesCategory.valueOf(sc.next());
+                value = AstartesCategory.valueOf(sc.nextLine());
             } catch (IllegalArgumentException e) {
                 System.out.printf("%s - %s\n", "Вы ввели другое значение, используйте эти варианты", AstartesCategory.all_values());
             } catch (Exception e) {
@@ -77,7 +77,7 @@ public class InputHandler {
         Weapon value = null;
         while (true) {
             try {
-                value = Weapon.valueOf(sc.next());
+                value = Weapon.valueOf(sc.nextLine());
             } catch (IllegalArgumentException e) {
                 System.out.printf("%s - %s\n", "Вы ввели другое значение, используйте эти варианты", Weapon.all_values());
             } catch (Exception e) {
@@ -94,16 +94,14 @@ public class InputHandler {
      * @return число типа long, введенное пользователем
      */
     public static Long longInput(String name) {
-        Long value;
+        Long value = null;
         while (true) {
             try {
                 System.out.println("Введите " + name + ":");
-                value = sc.nextLong();
+                value = Long.parseLong(sc.nextLine());
                 break;
-            } catch (InputMismatchException e) {
+            } catch (NumberFormatException e) {
                 System.out.println("Вы ввели не число");
-            } catch (Exception e) {
-                System.out.println("Упс, ошибка :(");
             }
         }
         return value;
@@ -115,9 +113,10 @@ public class InputHandler {
      */
     public static Long Id() {
         long id;
+        sc.nextLine();
         while (true) {
             try {
-                id = sc.nextLong();
+                id = Long.parseLong(sc.nextLine());
                 break;
             } catch (InputMismatchException e) {
                 System.out.println("Вы ввели не число");
@@ -134,9 +133,10 @@ public class InputHandler {
      */
     public static int intInput() {
         int value;
+        sc.nextLine();
         while (true) {
             try {
-                value = sc.nextInt();
+                value = Integer.parseInt(sc.nextLine());
                 break;
             } catch (InputMismatchException e) {
                 System.out.println("Вы ввели не число");

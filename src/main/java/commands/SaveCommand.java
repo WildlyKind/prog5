@@ -4,7 +4,7 @@ import my_classes.FileHandler;
 
 public class SaveCommand implements Command{
     @Override
-    public void execute() {
+    public void execute(String[] args) {
         FileHandler.save();
     }
 

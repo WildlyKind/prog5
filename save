@@ -1,20 +1,4 @@
 [ {
-  "id" : 0,
-  "name" : "EL1",
-  "coordinates" : {
-    "x" : 1,
-    "y" : 1.0
-  },
-  "creationDate" : 1772359580642,
-  "health" : 1.0,
-  "height" : 1.0,
-  "category" : "HELIX",
-  "weaponType" : "BOLTGUN",
-  "chapter" : {
-    "name" : "NAMEMEME",
-    "parentLegion" : "PARLEG"
-  }
-}, {
   "id" : 1,
   "name" : "NAME2",
   "coordinates" : {
@@ -29,5 +13,21 @@
   "chapter" : {
     "name" : "NAMEMEMEMEME",
     "parentLegion" : "LOL"
+  }
+}, {
+  "id" : 0,
+  "name" : "sd",
+  "coordinates" : {
+    "x" : 23,
+    "y" : 233.0
+  },
+  "creationDate" : 1772625744178,
+  "health" : 233.0,
+  "height" : 2222.0,
+  "category" : "HELIX",
+  "weaponType" : "BOLTGUN",
+  "chapter" : {
+    "name" : "ddf",
+    "parentLegion" : "edf"
   }
 } ]

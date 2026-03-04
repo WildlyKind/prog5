@@ -2,6 +2,7 @@ import commands.Invoker;
 import my_classes.FileHandler;
 import my_classes.InputHandler;
 
+import java.util.Arrays;
 import java.util.Scanner;
 
 public class Main {
@@ -15,11 +16,11 @@ public class Main {
         FileHandler.load("C:\\Users\\Nata\\Desktop\\proga5.1\\" + file_name);
         FileHandler.get_file_name(file_name);
         while (InputHandler.sc.hasNext()) {
-            String line = InputHandler.sc.next();
+            String line = InputHandler.sc.nextLine();
             String[] tokens = line.split(" ");
 
             try {
-                Invoker.setCommand(tokens[0]);
+                Invoker.setCommand(tokens[0], Arrays.copyOfRange(tokens, 1, tokens.length));
             } catch (NullPointerException e) {
                 System.out.println("не найдена введенная команда, введите 'help'");
             } finally {

@@ -5,7 +5,7 @@ import my_classes.SpaceMarine;
 
 public class ShowCommand implements Command{
     @Override
-    public void execute() {
+    public void execute(String[] args) {
         for (SpaceMarine s: CollectionHandler.spaceMarines) {
             System.out.println("ID - " + s.getId());
             System.out.println("name - " + s.getName());
