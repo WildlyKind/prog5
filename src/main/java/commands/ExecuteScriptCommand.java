@@ -8,6 +8,8 @@ import java.util.Arrays;
 import java.util.Scanner;
 
 public class ExecuteScriptCommand implements Command{
+    static private int recursionDepth = 0;
+
     @Override
     public void execute(String[] args) {
         try {
@@ -27,13 +29,14 @@ public class ExecuteScriptCommand implements Command{
                 }
             }
         } catch (FileNotFoundException e) {
-            System.out.println("Файл не найден");
+            System.out.println("Файл не найден!");
         } catch (IOException e) {
             System.out.println("Ошибка IOException :(");
         } catch (Exception e) {
             System.out.println("Ошибка");
         } finally {
             InputHandler.sc = new Scanner(System.in);
+            recursionDepth--;
         }
     }
 

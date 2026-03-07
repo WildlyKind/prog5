@@ -5,7 +5,7 @@ import my_classes.CollectionHandler;
 public class MaxByNameCommand implements Command{
     @Override
     public void execute(String[] args) {
-        System.out.println(CollectionHandler.max_by_name());
+        System.out.println(CollectionHandler.maxByName());
     }
 
     @Override

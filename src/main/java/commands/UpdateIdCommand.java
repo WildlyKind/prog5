@@ -9,7 +9,7 @@ public class UpdateIdCommand implements Command{
         Long id;
         try {
             id = Long.parseLong(args[0]);
-            CollectionHandler.update_id(id);
+            CollectionHandler.updateId(id);
         } catch (Exception e) {
             System.out.println("Вы ввели неправильный id");
         }

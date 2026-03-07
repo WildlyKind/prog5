@@ -18,7 +18,7 @@ public class FileHandler {
      * Возвращает имя файла
      * @param name имя файла
      */
-    public static void get_file_name(String name) {
+    public static void getFileName(String name) {
         file_name = name;
     }
 
@@ -40,7 +40,7 @@ public class FileHandler {
             pw.close();
 
         } catch (FileNotFoundException e) {
-            System.out.println("Файл не найден");
+            System.out.println("Файл '" + file_name + "' не найден");
         } catch (Exception e) {
             System.out.println("Ошибка");
         }
@@ -58,9 +58,9 @@ public class FileHandler {
             //помогает сохранить информацию о дженериках, из-за стирания типов мы не можем просто написать LinkedList<SpaceMarine>.class
 
             CollectionHandler.spaceMarines = employeeList;
-            SpaceMarine.setId(CollectionHandler.max_id()+1);
+            SpaceMarine.setId(CollectionHandler.maxId()+1);
         } catch (FileNotFoundException e) {
-            System.out.println("Файл не найден");
+            System.out.println("Файл '" + file_name + "' не найден");
         } catch (IOException e) {
             System.out.println("Ошибка");
         } finally {

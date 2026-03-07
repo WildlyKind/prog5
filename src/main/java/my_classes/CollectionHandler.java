@@ -45,7 +45,7 @@ public class CollectionHandler {
      * Находит максимальное name среди всех элементов коллекции
      * @return максимальное name
      */
-    public static String max_by_name() {
+    public static String maxByName() {
         String[] names = new String[spaceMarines.size()];
         int index = 0;
         for (SpaceMarine sm: CollectionHandler.spaceMarines) {
@@ -64,7 +64,7 @@ public class CollectionHandler {
      * Находит уникальные weaponType среди всех элементов коллекции
      * @return множество всех уникальных weaponType
      */
-    public static HashSet<Weapon> print_unique_weapon_type() {
+    public static HashSet<Weapon> printUniqueWeaponType() {
         HashSet<Weapon> weapons = new HashSet<>();
         for (SpaceMarine sm: CollectionHandler.spaceMarines) {
             weapons.add(sm.getWeaponType());
@@ -85,8 +85,8 @@ public class CollectionHandler {
      * Обновляет элемент по его id
      * @param id id элемента
      */
-    public static void update_id(Long id) {
-        SpaceMarine s = find_by_id(id);
+    public static void updateId(Long id) {
+        SpaceMarine s = findById(id);
         if (s == null) {return;}
         s.update();
     }
@@ -96,7 +96,7 @@ public class CollectionHandler {
      * @param id id элемента
      * @return элемент, если такой элемент не существует, то null
      */
-    private static SpaceMarine find_by_id(Long id) {
+    private static SpaceMarine findById(Long id) {
         for (SpaceMarine s: spaceMarines) {
             if (s.getId().equals(id)) {
                 return s;
@@ -108,7 +108,7 @@ public class CollectionHandler {
     /**
      * Выводит элементы, значение поля name которых начинается с заданной подстроки
      */
-    public static void filter_starts_with_name(String inputName) {
+    public static void filterStartsWithName(String inputName) {
         boolean flag = false;
         for (SpaceMarine s: spaceMarines) {
             if (s.getName().startsWith(inputName)) {
@@ -123,7 +123,7 @@ public class CollectionHandler {
      * Добавляет новый элемент в коллекцию, если его значение превышает значение наибольшего элемента этой коллекции
      * @param newSpaceMarine Объект SpaceMarine для попытки добавления
      */
-    public static void add_if_max(SpaceMarine newSpaceMarine) {
+    public static void addIfMax(SpaceMarine newSpaceMarine) {
         for (SpaceMarine s: spaceMarines) {
             if (newSpaceMarine.compareTo(s) < 0) {
                 System.out.println("Элемент не добавлен, его значение не превышает максимальное");
@@ -138,7 +138,7 @@ public class CollectionHandler {
      * Удаляет из коллекции все элементы, меньшие, чем заданный
      * @param newSpaceMarine Объект SpaceMarine для попытки добавления
      */
-    public static void remove_lower(SpaceMarine newSpaceMarine) {
+    public static void removeLower(SpaceMarine newSpaceMarine) {
         HashSet<SpaceMarine> toSpaceMarine = new HashSet<>();
         for (SpaceMarine s: spaceMarines) {
             if (newSpaceMarine.compareTo(s) > 0) {
@@ -157,7 +157,7 @@ public class CollectionHandler {
      * Находит максимальный id среди всех элементов коллекции
      * @return максимальный id
      */
-    public static Long max_id() {
+    public static Long maxId() {
         Long ma = 0L;
         for (SpaceMarine s: spaceMarines) {
             if (s.getId() > ma) {ma = s.getId();}

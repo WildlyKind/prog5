@@ -6,7 +6,7 @@ import my_classes.SpaceMarine;
 public class AddIfMaxCommand implements Command{
     @Override
     public void execute(String[] args) {
-        CollectionHandler.add_if_max(new SpaceMarine());
+        CollectionHandler.addIfMax(new SpaceMarine());
     }
 
     @Override

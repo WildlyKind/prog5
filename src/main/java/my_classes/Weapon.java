@@ -15,12 +15,6 @@ public enum Weapon {
     /**
      * @return Возвращает строку со всеми значениями перечисления, разделёнными запятой.
      */
-    /*
-    public static String all_values() {
-        return Arrays.stream(values())
-                .map(Enum::name)
-                .collect(Collectors.joining(", "));
-    }*/
     public static String all_values() {
         StringBuilder result = new StringBuilder();
         for (int i = 0; i < values().length; i++) {

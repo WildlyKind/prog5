@@ -13,8 +13,8 @@ public class Main {
         if (args.length > 0) {
             file_name = args[0];
         }
-        FileHandler.load("C:\\Users\\Nata\\Desktop\\proga5.1\\" + file_name);
-        FileHandler.get_file_name(file_name);
+        FileHandler.load(file_name);
+        FileHandler.getFileName(file_name);
         while (InputHandler.sc.hasNext()) {
             String line = InputHandler.sc.nextLine();
             String[] tokens = line.split(" ");

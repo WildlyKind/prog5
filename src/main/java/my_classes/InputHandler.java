@@ -1,6 +1,7 @@
 package my_classes;
 
 import java.util.InputMismatchException;
+import java.util.NoSuchElementException;
 import java.util.Scanner;
 
 /**
@@ -39,6 +40,8 @@ public class InputHandler {
                 System.out.println("Введите " + name + ":");
                 value = Double.parseDouble(sc.nextLine());
                 break;
+            } catch (NoSuchElementException e) {
+                System.out.println("Не передан элемент");
             } catch (NumberFormatException e) {
                 System.out.println("Вы ввели не число");
             } catch (Exception e) {
@@ -57,7 +60,7 @@ public class InputHandler {
         AstartesCategory value = null;
         while (true) {
             try {
-                value = AstartesCategory.valueOf(sc.nextLine());
+                value = AstartesCategory.valueOf(sc.nextLine().toUpperCase());
             } catch (IllegalArgumentException e) {
                 System.out.printf("%s - %s\n", "Вы ввели другое значение, используйте эти варианты", AstartesCategory.all_values());
             } catch (Exception e) {
@@ -77,7 +80,7 @@ public class InputHandler {
         Weapon value = null;
         while (true) {
             try {
-                value = Weapon.valueOf(sc.nextLine());
+                value = Weapon.valueOf(sc.nextLine().toUpperCase());
             } catch (IllegalArgumentException e) {
                 System.out.printf("%s - %s\n", "Вы ввели другое значение, используйте эти варианты", Weapon.all_values());
             } catch (Exception e) {
@@ -100,7 +103,9 @@ public class InputHandler {
                 System.out.println("Введите " + name + ":");
                 value = Long.parseLong(sc.nextLine());
                 break;
-            } catch (NumberFormatException e) {
+            } catch (NoSuchElementException e) {
+                System.out.println("Не передан элемент");
+            } catch (NumberFormatException e){
                 System.out.println("Вы ввели не число");
             }
         }

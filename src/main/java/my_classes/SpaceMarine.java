@@ -15,7 +15,7 @@ public class SpaceMarine implements Comparable<SpaceMarine>{
     private AstartesCategory category; //Поле не может быть null
     private Weapon weaponType; //Поле не может быть null
     private Chapter chapter; //Поле может быть null
-    static Long count = CollectionHandler.max_id();
+    static Long count = CollectionHandler.maxId();
     public static boolean isLoading = false;
 
     public SpaceMarine() {
@@ -95,7 +95,10 @@ public class SpaceMarine implements Comparable<SpaceMarine>{
 
     @Override
     public String toString() {
-        return String.format("%s: %s, %s, %s", id, name, health, height);
+        return String.format("id: %s, name: %s, creationDate: %s,\nhealth: %s, height: %s,\nweaponType: %s, " +
+                        "category: %s,\ncoordinates x: %s, coordinates x: %s,\nchapter parentLegion: %s, chapter name: %s\n",
+                id, name, creationDate, health, height, weaponType, category, coordinates.getX(), coordinates.getY(),
+        chapter.getParentLegion(), chapter.getName());
     }
 
     /**

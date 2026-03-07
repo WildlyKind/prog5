@@ -1,8 +1,8 @@
 [ {
-  "id" : 1,
+  "id" : 10,
   "name" : "NAME2",
   "coordinates" : {
-    "x" : 2,
+    "x" : -9999999,
     "y" : 2.0
   },
   "creationDate" : 1772359638158,
@@ -15,7 +15,7 @@
     "parentLegion" : "LOL"
   }
 }, {
-  "id" : 0,
+  "id" : 110,
   "name" : "sd",
   "coordinates" : {
     "x" : 23,
@@ -29,5 +29,37 @@
   "chapter" : {
     "name" : "ddf",
     "parentLegion" : "edf"
+  }
+}, {
+  "id" : 1,
+  "name" : "1",
+  "coordinates" : {
+    "x" : 2,
+    "y" : 2.0
+  },
+  "creationDate" : 1772640907288,
+  "health" : 1.0,
+  "height" : -1.0,
+  "category" : "HELIX",
+  "weaponType" : "BOLTGUN",
+  "chapter" : {
+    "name" : "a",
+    "parentLegion" : "-"
+  }
+}, {
+  "id" : 111,
+  "name" : "\"",
+  "coordinates" : {
+    "x" : 2,
+    "y" : 2.0
+  },
+  "creationDate" : 1772641407143,
+  "health" : 2.0,
+  "height" : 2.0,
+  "category" : "HELIX",
+  "weaponType" : "BOLTGUN",
+  "chapter" : {
+    "name" : "\"",
+    "parentLegion" : "\""
   }
 } ]

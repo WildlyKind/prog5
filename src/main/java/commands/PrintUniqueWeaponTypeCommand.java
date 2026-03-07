@@ -5,7 +5,7 @@ import my_classes.CollectionHandler;
 public class PrintUniqueWeaponTypeCommand implements Command{
     @Override
     public void execute(String[] args) {
-        System.out.println(CollectionHandler.print_unique_weapon_type());
+        System.out.println(CollectionHandler.printUniqueWeaponType());
     }
 
     @Override

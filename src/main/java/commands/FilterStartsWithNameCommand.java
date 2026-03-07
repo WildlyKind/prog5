@@ -7,7 +7,7 @@ public class FilterStartsWithNameCommand implements Command{
     public void execute(String[] args) {
         try {
             //id = Long.parseLong(args[0]);
-            CollectionHandler.filter_starts_with_name(args[0]);
+            CollectionHandler.filterStartsWithName(args[0]);
         } catch (Exception e) {
             System.out.println("Вы ввели неправильный name");
         }
