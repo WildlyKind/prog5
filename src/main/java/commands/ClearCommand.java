@@ -12,4 +12,9 @@ public class ClearCommand implements Command{
     public void execute(String[] args) {
         CollectionHandler.clear();
     }
+
+    @Override
+    public String name() {
+        return "clear";
+    }
 }

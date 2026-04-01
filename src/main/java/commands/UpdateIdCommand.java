@@ -20,4 +20,9 @@ public class UpdateIdCommand implements Command{
     public String desc() {
         return "обновить значение элемента коллекции, id которого равен заданному";
     }
+
+    @Override
+    public String name() {
+        return "update_id";
+    }
 }

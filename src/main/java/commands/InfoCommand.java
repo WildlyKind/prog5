@@ -12,4 +12,9 @@ public class InfoCommand implements Command{
     public void execute(String[] args) {
         CollectionHandler.info();
     }
+
+    @Override
+    public String name() {
+        return "info";
+    }
 }

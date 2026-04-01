@@ -13,4 +13,9 @@ public class AddCommand implements Command{
     public String desc() {
         return "добавить новый элемент в коллекцию";
     }
+
+    @Override
+    public String name() {
+        return "add";
+    }
 }

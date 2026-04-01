@@ -15,4 +15,9 @@ public class ShowCommand implements Command{
     public String desc() {
         return "вывести в стандартный поток вывода все элементы коллекции в строковом представлении";
     }
+
+    @Override
+    public String name() {
+        return "show";
+    }
 }

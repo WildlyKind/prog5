@@ -2,12 +2,12 @@ package commands;
 
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.Map;
 
 /**
  * Класс, отвечающий за выполнение команд
  */
 public class Invoker {
-    static Command command;
     public static HashMap<String, Command> commands = new HashMap<>();
     static ArrayList<String> history = new ArrayList<>();
 
@@ -28,6 +28,7 @@ public class Invoker {
         commands.put("remove_lower", new RemoveLowerCommand());
         commands.put("execute_script", new ExecuteScriptCommand());
         commands.put("save", new SaveCommand());
+
     }
 
     /**

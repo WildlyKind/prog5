@@ -19,6 +19,11 @@ public class Chapter {
         this.parentLegion = InputHandler.stringInput("parentLegion");
     }
 
+    public Boolean validate() {
+        if (this.name == null || this.name.isEmpty()) {return false;}
+        return true;
+    }
+
     /**
      * @return Chapter name
      */

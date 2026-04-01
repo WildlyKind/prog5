@@ -12,4 +12,9 @@ public class MaxByNameCommand implements Command{
     public String desc() {
         return "вывести любой объект из коллекции, значение поля name которого является максимальным";
     }
+
+    @Override
+    public String name() {
+        return "max_by_name";
+    }
 }

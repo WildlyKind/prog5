@@ -20,4 +20,9 @@ public class RemoveCommand implements Command{
     public String desc() {
         return "Удалить элемент из коллекции по его id";
     }
+
+    @Override
+    public String name() {
+        return "remove";
+    }
 }

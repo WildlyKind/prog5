@@ -5,6 +5,7 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.SerializationFeature;
 
 import java.io.*;
+import java.util.HashSet;
 import java.util.LinkedList;
 
 /**
@@ -57,7 +58,16 @@ public class FileHandler {
             LinkedList<SpaceMarine> employeeList = objectMapper.readValue(file, new TypeReference<LinkedList<SpaceMarine>>() {});
             //помогает сохранить информацию о дженериках, из-за стирания типов мы не можем просто написать LinkedList<SpaceMarine>.class
 
-            CollectionHandler.spaceMarines = employeeList;
+            HashSet<Long> uniqueId = new HashSet<>();
+            //CollectionHandler.spaceMarines.add(employeeList.get(0));
+            for (SpaceMarine sp: employeeList) {
+                if (!(uniqueId.contains(sp.getId())) && sp.validate()) {
+                    CollectionHandler.spaceMarines.add(sp);
+                    uniqueId.add(sp.getId());
+                }
+            }
+
+            //CollectionHandler.spaceMarines = employeeList;
             SpaceMarine.setId(CollectionHandler.maxId()+1);
         } catch (FileNotFoundException e) {
             System.out.println("Файл '" + file_name + "' не найден");

@@ -13,4 +13,9 @@ public class AddIfMaxCommand implements Command{
     public String desc() {
         return "добавить новый элемент в коллекцию, если его значение превышает значение наибольшего элемента этой коллекции";
     }
+
+    @Override
+    public String name() {
+        return "add_if_max";
+    }
 }

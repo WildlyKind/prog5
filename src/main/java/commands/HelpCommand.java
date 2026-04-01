@@ -13,4 +13,9 @@ public class HelpCommand implements Command{
     public String desc() {
         return "вывести справку по доступным командам";
     }
+
+    @Override
+    public String name() {
+        return "help";
+    }
 }

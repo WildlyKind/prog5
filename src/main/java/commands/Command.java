@@ -14,4 +14,6 @@ public interface Command {
      * @return описание
      */
     public String desc();
+
+    public String name();
 }

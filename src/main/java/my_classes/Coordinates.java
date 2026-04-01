@@ -19,6 +19,15 @@ public class Coordinates {
         this.y = InputHandler.doubleInput("y");
     }
 
+    public Boolean validate() {
+        if (this.x == null || this.x <= -879) {
+            return false;
+        } if (this.y == null) {
+            return false;
+        }
+        return true;
+    }
+
     /**
      * @return Coordinates y
      */

@@ -18,4 +18,9 @@ public class FilterStartsWithNameCommand implements Command{
     public String desc() {
         return "вывести элементы, значение поля name которых начинается с заданной подстроки";
     }
+
+    @Override
+    public String name() {
+        return "filter_starts_with_name";
+    }
 }

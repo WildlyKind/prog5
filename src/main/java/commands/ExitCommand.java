@@ -10,4 +10,9 @@ public class ExitCommand implements Command{
     public void execute(String[] args) {
         System.exit(0);
     }
+
+    @Override
+    public String name() {
+        return "exit";
+    }
 }

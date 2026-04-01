@@ -12,4 +12,9 @@ public class SaveCommand implements Command{
     public String desc() {
         return "сохранить коллекцию в файл";
     }
+
+    @Override
+    public String name() {
+        return "save";
+    }
 }

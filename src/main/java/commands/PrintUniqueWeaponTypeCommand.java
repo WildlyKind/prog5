@@ -12,4 +12,9 @@ public class PrintUniqueWeaponTypeCommand implements Command{
     public String desc() {
         return "вывести уникальные значения поля weaponType всех элементов в коллекции";
     }
+
+    @Override
+    public String name() {
+        return "print_unique_weapon_type";
+    }
 }

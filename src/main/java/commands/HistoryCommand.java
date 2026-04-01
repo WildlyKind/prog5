@@ -12,4 +12,9 @@ public class HistoryCommand implements Command{
             System.out.println(s);
         }
     }
+
+    @Override
+    public String name() {
+        return "history";
+    }
 }

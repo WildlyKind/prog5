@@ -38,6 +38,27 @@ public class SpaceMarine implements Comparable<SpaceMarine>{
         this.chapter = new Chapter();
     }
 
+    public Boolean validate() {
+        if (this.id == null || this.id < 0) {
+            return false;
+        } if (this.name == null || this.name.isEmpty()) {
+            return false;
+        } if (this.coordinates == null || !this.coordinates.validate()) {
+            return false;
+        } if (this.creationDate == null) {
+            return false;
+        } if (this.health <= 0) {
+            return false;
+        } if (this.category == null) {
+            return false;
+        } if (this.weaponType == null) {
+            return false;
+        } if (this.chapter != null && !(this.chapter.validate())) {
+            return false;
+        }
+        return true;
+    }
+
     /**
      * @return SpaceMarine id
      */
